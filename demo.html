@@ -5,32 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Portfolio | Corlate</title>
+    <title>Nile | Demo-Broadcaster</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
+     
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
-<body>
 
-     <header id="header">
+<body>
+    <header id="header">
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html"><img src="images/nilejs-2.png" alt="logo" width=140 height=69></a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img style='height: 69px; width: 140px; object-fit: contain' src="images/nilejs-2.png" alt="logo"></a>
                 </div>
-				
+                
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Getting Started</a></li>
@@ -43,20 +46,39 @@
         </nav><!--/nav-->	
     </header><!--/header-->
 
-    <section id="demo">
-        <div class="container">
-            <div class="center">
-               <h2>Nile.js Demo</h2>
-               <p class="lead">Select Broadcaster or Viewer</p>
-            </div>
-    
-            <ul class="demo-filter text-center">
-                <li><a class="btn btn-default" href="broadcaster.html">Broadcaster</a></li>
-                <li><a class="btn btn-default" href="viewer.html">Viewer</a></li>
-            </ul><!--/#portfolio-filter-->
-            </div>
-        </div>
-    </section><!--/#bottom-->
+    			<!-- Our Skill -->
+			<div class="skill-wrap clearfix">
+			
+				<div class="center wow fadeInDown">
+					<h2>Nile.js Demo</h2>
+					<p class="lead">Welcome to the Demo! <br> Begin by broadcasting your live stream <br> Then view the stream from the viewer tab!</p>
+				</div>
+				
+				<div class="row">
+		
+					<div class="col-sm-3">
+					</div>
+					
+					 <div class="col-sm-3">
+						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<a href="broadcaster.html"><div class="html-skill">                                  
+								<p>Broadcaster</p>
+							</div></a>
+						</div>
+					</div>
+					
+					<div class="col-sm-3">
+						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
+							<a href="viewer.html"><div class="css-skill">                                    
+								<p>Viewer</p>
+							</div></a>
+						</div>
+					</div>
+
+                    <div class="col-sm-3">
+					</div>
+				</div>
+            </div><!--/.our-skill-->
 
     <footer id="footer" class="midnight-blue">
         <div class="container">
