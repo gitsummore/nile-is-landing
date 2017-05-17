@@ -10,6 +10,7 @@ const server = app.listen(process.env.PORT || 3000, () => {
 });
 
 const nileServer = require('./nileServer')(server);
+// const nileServer = require('nile.js/nileServer')(server);
 
 // stack of stored cookies
 const cookies = {};
