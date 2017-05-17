@@ -188,6 +188,10 @@ body > section {
   color: #fff;
 }
 
+.navbar-header .navbar-toggle .icon-bar {
+  background-color: black;
+}
+
 .navbar-inverse .navbar-nav .dropdown-menu > li:last-child > a {
   border-radius: 0 0 3px 3px;
 }
@@ -336,6 +340,7 @@ body > section {
 
 .photo {
   border-radius: 100%;
+  text-align: center;
 }
 
 #team h2, 
@@ -349,9 +354,9 @@ body > section {
   padding: 0;
 }
 
-.teams ul li{
+.teams ul li {
+  text-align: center;
   display: inline-block;
-  width: 30%;
 }
 
 /*************************
