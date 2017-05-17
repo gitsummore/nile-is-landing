@@ -408,6 +408,16 @@ body > section {
   -webkit-box-shadow: none;
 }
 
+.demo-filter #play:hover,
+.demo-filter #play:active
+ {
+  color:#fff;
+  background: #90ee90;
+  border: 1px solid #90ee90;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 .demo-items > li {
   float: left;
   padding: 0;
