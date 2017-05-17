@@ -38,9 +38,9 @@
 
 				<div class="collapse navbar-collapse navbar-right">
 					<ul class="nav navbar-nav">
-						<li><a href="https://nilejs.com/index.html">Getting Started</a></li>
+						<li><a href="https://nilejs.com/index.html">Home</a></li>
 						<li><a href="https://nilejs.com/demo.html">Demo</a></li>
-						<li class="active"><a href="https://nilejs.com/docs.html">Docs</a></li>
+						<li class="active"><a href="https://nilejs.com/docs.html">Getting Started</a></li>
 						<li><a href="https://github.com/gitsummore/nile.js" target="_blank">Github</a></li>
 					</ul>
 				</div>
@@ -51,179 +51,37 @@
 	</header>
 	<!--/header-->
 
+	<!--Docs-->
 	<section id="docs">
 		<div class="container">
-			<div class="center wow fadeInDown">
-				<h2>About Corlate</h2>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua.
-					Ut enim ad minim veniam</p>
-			</div>
-
-			<!-- Our Skill -->
 			<div class="skill-wrap clearfix">
 
 				<div class="center wow fadeInDown">
-					<h2>Our Skill</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua.
-						Ut enim ad minim veniam</p>
+					<p class="docsHeaders">Why WebTorrent?</p>
+					<p class="lead">By using the collective power of WebTorrent, video streams get progressively stronger as more peers contribute to a
+						torrent. <br> With torrents, it is also possible for users to access previous parts of a stream unlike traditional
+						WebRTC video streaming. </p>
 				</div>
 
-				<div class="row">
+				<div class="center wow fadeInDown col-md-6">
+					<p class="docsHeaders">Server</p>
+					<p class="lead">This is the plug-and-play middleware that receives the torrent link from the broadcasting client <br> and sets up the
+						proper Socket.io connections for the viewing clients.</p>
+				</div>
 
-					<div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="joomla-skill">
-								<p><em>85%</em></p>
-								<p>Joomla</p>
-							</div>
-						</div>
-					</div>
+				<div class="center wow fadeInDown col-md-6">
+					<p class="docsHeaders">Broadcaster</p>
+					<p class="lead">This is the client component that records video from a device's camera, saving it to generated torrent files, <br> and
+						sending those torrents' magnet link out to the viewing clients.</p>
+				</div>
 
-					<div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="html-skill">
-								<p><em>95%</em></p>
-								<p>HTML</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-							<div class="css-skill">
-								<p><em>80%</em></p>
-								<p>CSS</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
-							<div class="wp-skill">
-								<p><em>90%</em></p>
-								<p>Wordpress</p>
-							</div>
-						</div>
-					</div>
+				<div class="center wow fadeInDown col-md-12" id="viewerDocs">
+					<p class="docsHeaders">Viewer</p>
+					<p class="lead">This is the client which views what the Broadcaster is recording. It receives a torrent magnet link <br> and renders
+						the video from that torrent to an injected video tag using WebTorrent.</p>
 				</div>
 			</div>
-			<!--/.our-skill-->
-
-
-			<!-- our-team -->
-			<div class="team">
-				<div class="center wow fadeInDown">
-					<h2>Team of Corlate</h2>
-					<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua.
-						Ut enim ad minim veniam</p>
-				</div>
-
-				<div class="row clearfix">
-					<div class="col-md-4 col-sm-6">
-						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="media">
-								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man1.jpg" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
-									<ul class="tag clearfix">
-									</ul>
-								</div>
-							</div>
-							<!--/.media -->
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
-								form, by injected humour, or randomised words which don't look even slightly believable.</p>
-						</div>
-					</div>
-					<!--/.col-lg-4 -->
-
-
-					<div class="col-md-4 col-sm-6 col-md-offset-2">
-						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="media">
-								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man2.jpg" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
-									<ul class="tag clearfix">
-									</ul>
-								</div>
-							</div>
-							<!--/.media -->
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
-								form, by injected humour, or randomised words which don't look even slightly believable.</p>
-						</div>
-					</div>
-					<!--/.col-lg-4 -->
-				</div>
-				<!--/.row -->
-
-				<div class="row clearfix">
-					<div class="col-md-4 col-sm-6 col-md-offset-2">
-						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="media">
-								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man3.jpg" alt=""></a>
-								</div>
-
-								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<!--/.media -->
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
-								form, by injected humour, or randomised words which don't look even slightly believable.</p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-md-offset-2">
-						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="media">
-								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man4.jpg" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-							</div>
-							<!--/.media -->
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some
-								form, by injected humour, or randomised words which don't look even slightly believable.</p>
-						</div>
-					</div>
-				</div>
-				<!--/.row-->
-			</div>
-			<!--section-->
 		</div>
-		<!--/.container-->
 	</section>
 	<!--/docs-->
 

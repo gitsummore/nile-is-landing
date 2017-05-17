@@ -1,4 +1,4 @@
-const viewer = new Viewer('video', 3000);
+const viewer = new Viewer('video');
 
 document.getElementById('player1').setAttribute("class", "embed-responsive-item")
 document.getElementById('player2').setAttribute("class", "embed-responsive-item")
