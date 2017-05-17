@@ -2,20 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Nile | Docs</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-     
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/ico" />
-</head><!--/head-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Nile | Docs</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/prettyPhoto.css" rel="stylesheet">
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/ico" />
+</head>
+<!--/head-->
 
 <body>
 	<header id="header">
@@ -76,6 +77,90 @@
 						the video from that torrent to an injected video tag using WebTorrent.</p>
 				</div>
 			</div>
+		</div>
+	</section>
+	<hr>
+	<section id="docs">
+		<div class="container">
+			<div class="skill-wrap clearfix lead">
+
+				<h1 style="color:#4e4e4e; text-align: center">Usage</h1>
+
+				<br>
+				<br>
+				<p class="docsHeaders usage"><b>Server</b></p>
+				<p class="usage">By using the collective power of WebTorrent, video streams get progressively stronger as more peers contribute to a torrent.
+					<br> With torrents, it is also possible for users to access previous parts of a stream unlike traditional WebRTC video
+					streaming.
+				</p>
+				<br>
+				<p class="usage">To use it, require nileServer from our package and pass in the Node Server instance you're using. In Express, you can
+					get this instance by calling app.listen:</p>
+				<div class="code">
+					<p class="codeContent">const server = app.listen(8000);<br>const nileServer = require('nile.js/nileServer')(server);</p>
+				</div>
+				<br>
+				<p class="usage">Now add the nile.js middleware w/ app.use:</p>
+				<div class="code">
+					<p class="codeContent">app.use('/', nileServer);</p>
+				</div>
+				<br>
+				<p class="usage">Note that this middleware will use a "magnet" route to accept POST requests with the magnet link from the Broadcaster.</p>
+			
+			<br>
+
+			<p class="docsHeaders usage"><b>Broadcaster</b></p><br>
+			<p class="usage">If using a file bundler e.g. (webpack), you may import the module.</p>
+			<div class="code">
+				<p class="codeContent">import { Broadcaster } from 'nile.js'</p>
+			</div>
+			<br>
+			<p class="usage">If you just want to test the module without bundling, it is currently being hosted on unpkg CDN. Use it as a script in
+				your html file.</p>
+			<div class="code">
+				<p class="codeContent">https://unpkg.com/nile.js@1.0.10/client/dist/nile.Broadcaster.min.js</p>
+			</div>
+			<br>
+
+			<p class="docsHeaders usage"><b>4 Parameters</b></p><br>
+			<ol>
+				<li class="usage"><i>recordInterval</i> - The Interval that the webcam recording should seed each segment of the video (ms)</li><br>
+				<li class="usage"><i>videoNodeIDForPlayback</i> - The id of the video node in the html where the broadcaster can see their own recording</li><br>
+				<li class="usage"><i>startStreamID</i> - The id of the button node that BEGINS the recording/live streaming</li><br>
+				<li class="usage"><i>stopStreamID</i> - The id of the button node that ENDS the recording/live streaming</li><br>
+			</ol>
+			<p class="usage">The Broadcaster object is used to stream video to a torrent and send the torrent link to the server and then to the network
+				of viewers.</p><br>
+			<p class="usage">Because torrents are immutable, we approximate streaming with torrents by setting a recordInterval, in milliseconds. This
+				sets how long each clip will be before being sent via torrent. From our experience, we recommend an interval 6000-10000
+				(6-10 seconds).</p><br>
+			<p class="usage">Next, pass in the ID of the video tag you'd like to view your recording playback from as well as button IDs for the starting
+				and stopping the stream.</p><br>
+			<p class="docsHeaders usage"><b>Example</b></p>
+			<div class="code">
+				<p class="codeContent">const broadcaster = new Broadcaster(8000, 'video', 'button-play-gum', 'button-stop-gum');</p>
+			</div><br>
+			<p class="docsHeaders usage"><b>Viewer</b></p><br>
+			<p class="usage">If using a file bundler e.g. (webpack), you may import the module.</p>
+			<div class="code">
+				<p class="codeContent">import { Viewer } from 'nile.js'</p>
+			</div><br>
+			<p class="usage">If you just want to test the module without bundling, it is currently being hosted on unpkg CDN. Use it as a script in
+				your html file.</p>
+			<div class="code">
+				<p class="codeContent">https://unpkg.com/nile.js@1.0.10/client/dist/nile.Viewer.min.js</p>
+			</div><br>
+			<p class="docsHeaders usage"><b>2 Parameters:</b></p><br>
+			<ol>
+				<li class="usage"><i>ID_of_NodeToRenderVideo</i> - ID of DOM element to render live feed to</li><br>
+				<li class="usage"><i>addedIceServers</i> - Array of extra WebRTC ICE servers, based on this interface laid out by W3C</li><br>
+			</ol>
+			<p class="docsHeaders usage"><b>Example</b></p>
+			<div class="code">
+				<p class="codeContent">const viewer = new Viewer('videos');</p>
+			</div><br>
+			<p class="usage">The Viewer maintains two WebRTC connections, one to a parent (client closest to server) and a child client (farther from server). These two connections create a chain of clients that propagate server-sent torrent information down to subsequent viewers down the chain.</p><br>
+			<p class="usage">In the event of a client disconnecting, the disconnecting Viewer will let its immediate child client know and tell it to reconnect to its parent. This maintains network integrity and ensures that the stream will still reach every client in that chain.</p><br>
 		</div>
 	</section>
 	<!--/docs-->
