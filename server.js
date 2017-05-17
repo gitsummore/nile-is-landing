@@ -16,7 +16,7 @@ const cookies = {};
 
 app.use(cookieParser());
 
-app.get('/broadcaster.html', (req, res) => {
+app.get(['/broadcaster.html', '/broadcaster-full.html'], (req, res) => {
   return res.redirect('/broadcaster');
 });
 
@@ -37,8 +37,12 @@ app.get('/broadcaster', (req, res) => {
       .set('Cache-Control', 'no-store')
       .sendFile(`${__dirname}/broadcaster.html`);
   } else {
-    res.send('Someone\'s currently broadcasting. Sorry mate!');
+    res.sendFile(`${__dirname}/broadcaster-full.html`);
   }
+});
+
+app.get('/viewer', (req, res) => {
+  res.sendFile(`${__dirname}/viewer.html`);
 });
 
 // listen for Broadcaster page closes
