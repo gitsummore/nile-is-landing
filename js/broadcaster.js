@@ -1,6 +1,22 @@
 const broadcaster = new Broadcaster(8000, 'video', 'play', 'stop');
 
-document.getElementById('broadcaster').setAttribute("class", "embed-responsive-item")
+document.getElementById('broadcaster').setAttribute("class", "embed-responsive-item");
+
+// Limit user's session if inactive
+var pageTimer;
+
+var playBtn = document.getElementById('play');
+var stopBtn = document.getElementById('stop');
+
+var inactiveTime = 5000;
+var inactiveFunc = () => {
+  window.close();
+};
+
+playBtn.addEventListener('click', (event) => {
+  // create timer
+  pageTimer = window.setTimeout(inactiveFunc, inactiveTime);
+});
 
 // send message to server that disconnecting
 window.onbeforeunload = function (event) {
