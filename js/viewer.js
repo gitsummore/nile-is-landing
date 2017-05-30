@@ -82,8 +82,6 @@ var myBarChart = new Chart(ctx, {
 
 let uploaded = 0;
 let downloaded = 0;
-let test = true;
-let up;
 
 window.setInterval(() => {
   let currTotals = viewer.returnTotals();
