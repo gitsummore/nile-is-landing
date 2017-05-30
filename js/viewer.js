@@ -56,18 +56,11 @@ var myBarChart = new Chart(ctx, {
 
 let uploaded = 0;
 let downloaded = 0;
-let test = true;
-let up;
 
 window.setInterval(() => {
-  if (test) {
-    up = Math.random() + 6;
-  } else {
-    up = Math.random() + 5;
-  }
   let currTotals = viewer.returnTotals();
 
-  uploaded += prettyBytes(currTotals.downloaded / up);
+  uploaded += prettyBytes(currTotals.uploaded / 4);
 
   downloaded += prettyBytes(currTotals.downloaded / 4);
   // console.log('currTotals', currTotals);
