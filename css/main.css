@@ -368,6 +368,14 @@ body > section {
   display: inline-block;
 }
 
+.lkin:hover {
+  color: white;
+}
+
+.lkbutt {
+  color: goldenrod;
+}
+
 /*************************
 ********* Demo CSS ******
 **************************/
@@ -559,18 +567,16 @@ body > section {
 }
 
 .code {
-  margin-right: 300px;
-  margin-left: 150px;
-  border-radius: 10px;
-  height: 60px;
-  width: 1150px;
+  position: relative;
+  height: 3%;
+  width: 100%;
   background-color: #e6f2ff;
+  border-radius: 5px;
 }
 
 .codeContent {
-  margin-top: 20px;
-  margin-left: 20px;
-  padding-top: 8px;
+  position: relative;
+  padding: 1em;
 }
 
 .skill-wrap {
